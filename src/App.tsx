@@ -16,7 +16,7 @@ function App() {
       firstname: "Anton",
       lastname: "Meier",
       age: 16,
-      grades: [1, "4", 3, "1", "A", undefined, "*", 1, 2],
+      grades: [1, "4", 3, "1", "A", undefined, 1, 2],
     },
     {
       firstname: "Berta",
@@ -33,9 +33,9 @@ function App() {
 
   ];
   function outputStudent(student:Student) {
-
-  console.log(`${student.firstname} ${student.lastname} (${student.age})`);
-  console.log("=".repeat(30));
+  const concat:string=`${student.firstname} ${student.lastname} (${student.age})`;
+  console.log(concat);
+  console.log("=".repeat(concat.length));
   console.log("Grades: ",student.grades
       .map(grade =>(grade===undefined ? '*' : grade))
       .join(","));
